@@ -4,7 +4,6 @@ import Login from "../login/login";
 import Inicio from "../index/index";
 import PrivateRouter from "../auth/privaterouter";
 import Clientes from "../clientes/inicioc";
-import Empleados from "../empleados/inicioe";
 import Main from "../MainPage";
 import Tienda from "../TiendaPage"
 
@@ -17,8 +16,7 @@ export default function AppRoutes() {
         <Route exact path={["/" ]} component={Inicio} />
         <Route exact path={["/index"]} component={ Inicio } />
         <Route exact path={["/main"]} component={ Main } />
-        <Route exact path={["/tienda"]} component={ Tienda } />
-        <PrivateRouter exact path={[ "/empleados" ]} component={ Empleados } />
+        <Route exact path={["/tienda"]} component={ Tienda } />        
         <PrivateRouter exact path={[ "/clientes" ]} component={ Clientes } />
         <Route path={"*"} component={() => (
             <h1 style={{ marginTop: 300 }}>
